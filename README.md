@@ -15,8 +15,9 @@
 ### 1. Lance–Williams 递推公式
 
 设类 A 和 B 合并为新类 C = A ∪ B，|A|, |B| 为类的大小（样本数）。对于任意另一个类 X，新类 C 与 X 之间的距离 d(C, X) 可以由 d(A, X)、d(B, X) 以及 d(A, B) 递推得到：
-
+$$
     d(C, X) = α_A * d(A, X) + α_B * d(B, X) + β * d(A, B) + γ * |d(A, X) - d(B, X)|
+$$
 
 对于**非加权**的六种方法，γ = 0，系数 (α_A, α_B, β) 如下表所示：
 
@@ -72,7 +73,7 @@
 - `merge`：$ (n-1) \times 2$ 矩阵，每行表示合并的两个类编号（负数表示原始样本）。
 - `height`：长度为 $n-1$ 的向量，每次合并时的距离（原始欧氏距离）。
 - `labels`：样本标签。
-- `method`：使用的聚类方法。"single"`, `"complete"`, `"average"`, `"centroid"`, `"median"`, `"ward"分别对应最短距离法、最长距离法、类平均法、重心法、中间距离法、离差平方和法（ward法）
+- `method`：使用的聚类方法。single, complete, average, centroid, median, ward分别对应最短距离法、最长距离法、类平均法、重心法、中间距离法、离差平方和法（ward法）
 - `members`：列表，记录每个（中间）类包含的原始样本索引。
 
 #### `plot_dendrogram(hc, main = "", cex.label = 0.8)`
