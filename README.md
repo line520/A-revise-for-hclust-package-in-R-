@@ -15,8 +15,9 @@
 ### 1. Lance–Williams 递推公式
 
 设类 A 和 B 合并为新类 C = A ∪ B，|A|, |B| 为类的大小（样本数）。对于任意另一个类 X，新类 C 与 X 之间的距离 d(C, X) 可以由 d(A, X)、d(B, X) 以及 d(A, B) 递推得到：
+
 $$
-    d(C, X) = α_A * d(A, X) + α_B * d(B, X) + β * d(A, B) + γ * |d(A, X) - d(B, X)|
+d(C, X) = \alpha_A d(A, X) + \alpha_B d(B, X) + \beta \, d(A, B) + \gamma |d(A, X) - d(B, X)|
 $$
 
 对于**非加权**的六种方法，γ = 0，系数 (α_A, α_B, β) 如下表所示：
